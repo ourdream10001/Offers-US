@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore this special offer, review the eligibility requirements, and continue to the official offer page.">
+  <meta name="theme-color" content="#080d1b">
+  <title>Exclusive Reward | Special Offer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080d1b;
+      --panel: #111a30;
+      --blue: #4778ff;
+      --cyan: #54e5ff;
+      --gold: #ffd779;
+      --white: #f7f9ff;
+      --muted: #a8b3cc;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, #1b2c59 0%, transparent 48%),
+        var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1080px, 92%);
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #ffffff12;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: -.7px;
+    }
+
+    .brand span { color: var(--cyan); }
+
+    .nav-label {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid #ffffff22;
+      padding: 7px 12px;
+      border-radius: 30px;
+    }
+
+    .hero {
+      padding: 66px 0 52px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cyan);
+      background: #54e5ff10;
+      border: 1px solid #54e5ff35;
+      border-radius: 50px;
+      padding: 8px 14px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 24px auto 16px;
+      font-size: clamp(35px, 6.5vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -2.8px;
+    }
+
+    h1 span {
+      background: linear-gradient(100deg, var(--cyan), #a5baff, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .offer-card {
+      width: min(790px, 100%);
+      margin: 38px auto 0;
+      padding: 22px;
+      border: 1px solid #ffffff20;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #172440, #0d1426 75%);
+      box-shadow: 0 25px 90px #00000055;
+    }
+
+    .visual {
+      min-height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at center, #304f9b 0%, #16244b 42%, #0c1224 78%);
+    }
+
+    .visual::before,
+    .visual::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffffff20;
+      border-radius: 50%;
+      width: 290px;
+      height: 290px;
+    }
+
+    .visual::after {
+      width: 390px;
+      height: 390px;
+    }
+
+    .product {
+      width: 180px;
+      height: 255px;
+      position: relative;
+      z-index: 1;
+      border: 5px solid #bac7dc;
+      border-radius: 30px;
+      background: linear-gradient(140deg, #354c79, #111a30 70%);
+      box-shadow: 0 20px 65px #0008, inset 0 0 20px #ffffff12;
+      transform: rotate(-8deg);
+    }
+
+    .product::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #09101d;
+      border: 2px solid #9aaccb;
+      top: 9px;
+      left: calc(50% - 6px);
+    }
+
+    .product::after {
+      content: "16";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 65px;
+      font-weight: 900;
+      opacity: .8;
+    }
+
+    .visual-tag {
+      position: absolute;
+      z-index: 2;
+      bottom: 18px;
+      left: 18px;
+      background: #080d1be8;
+      border: 1px solid #ffffff25;
+      padding: 9px 13px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    .card-content { padding: 25px 10px 8px; }
+
+    .card-content h2 {
+      font-size: clamp(24px, 4vw, 34px);
+      margin: 0 0 8px;
+      letter-spacing: -1px;
+    }
+
+    .card-content p {
+      color: var(--muted);
+      max-width: 550px;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(440px, 100%);
+      min-height: 60px;
+      margin: 25px auto 13px;
+      padding: 16px 24px;
+      border: 0;
+      border-radius: 14px;
+      background: linear-gradient(100deg, #4b77ff, #6453ee);
+      box-shadow: 0 10px 32px #456bff42;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .5px;
+      transition: transform .2s, filter .2s;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.12);
+    }
+
+    .cta:focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    .fine-print {
+      color: var(--muted);
+      font-size: 11px;
+      margin: 0 auto;
+      max-width: 560px;
+    }
+
+    .benefits {
+      padding: 54px 0 68px;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: clamp(27px, 4vw, 39px);
+      letter-spacing: -1.3px;
+      margin: 0 0 12px;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 auto 30px;
+      max-width: 550px;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .benefit {
+      padding: 24px 20px;
+      border-radius: 18px;
+      border: 1px solid #ffffff16;
+      background: linear-gradient(145deg, #151f37, #0c1324);
+    }
+
+    .benefit-icon {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: #4778ff20;
+      color: var(--cyan);
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .benefit h3 { margin: 0 0 8px; font-size: 16px; }
+
+    .benefit p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .steps {
+      padding: 35px 25px;
+      border-radius: 22px;
+      border: 1px solid #ffffff16;
+      background: #10192c;
+      margin-bottom: 65px;
+    }
+
+    .step-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .step { text-align: center; }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      color: #09101e;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bottom-cta {
+      text-align: center;
+      padding: 42px 20px;
+      border-radius: 24px;
+      margin-bottom: 65px;
+      background: radial-gradient(ellipse at top, #263d76, #11192c 75%);
+      border: 1px solid #ffffff18;
+    }
+
+    .bottom-cta h2 {
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .bottom-cta p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid #ffffff15;
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    footer a { color: var(--cyan); }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin: 12px 0;
+    }
+
+    @media (max-width: 650px) {
+      .hero { padding-top: 45px; }
+      h1 { letter-spacing: -1.5px; }
+      .offer-card { padding: 12px; border-radius: 21px; }
+      .visual { min-height: 260px; }
+      .product { transform: scale(.88) rotate(-8deg); }
+      .grid, .step-list { grid-template-columns: 1fr; }
+      .benefit { padding: 20px; }
+      .steps { padding: 28px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">REWARD<span>ZONE</span></div>
+      <div class="nav-label">✦ SPECIAL OFFER</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="eyebrow">✦ Discover the offer</div>
+
+      <h1>
+        Your Next <span>Exclusive Reward</span>
+        Starts Here
+      </h1>
+
+      <p class="intro">
+        Discover a special offer, check the eligibility requirements,
+        and see whether this opportunity is right for you.
+      </p>
+
+      <div class="offer-card">
+        <div class="visual" role="img"
+             aria-label="Stylized illustration of a premium smartphone">
+          <div class="product"></div>
+          <div class="visual-tag">✦ FEATURED OFFER</div>
+        </div>
+
+        <div class="card-content">
+          <h2>Explore the iPhone 16 Offer</h2>
+          <p>
+            Interested in this featured offer? Review the official
+            details and any eligibility requirements before continuing.
+            Availability and rewards depend on the actual offer terms.
+          </p>
+
+          <!-- REPLACE THE URL BELOW WITH YOUR AUTHENTIC CPA TRACKING URL -->
+          <a class="cta"
+             href="https://YOUR-CPA-TRACKING-LINK-HERE"
+             target="_blank"
+             rel="sponsored nofollow noopener">
+            CHECK OFFER DETAILS &nbsp; →
+          </a>
+
+          <p class="fine-print">
+            Please review the official terms, eligibility rules,
+            and any applicable costs before participating.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits container">
+      <h2 class="section-heading">Why Explore This Offer?</h2>
+      <p class="section-desc">
+        Get the essential details before deciding whether to continue.
+      </p>
+
+      <div class="grid">
+        <article class="benefit">
+          <div class="benefit-icon">✧</div>
+          <h3>Discover the Opportunity</h3>
+          <p>Learn what the offer provides and whether it matches your interests.</p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">✓</div>
+          <h3>Review Eligibility</h3>
+          <p>Check the official requirements, restrictions, and participation rules.</p>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon">↗</div>
+          <h3>Continue to the Offer</h3>
+          <p>Visit the official offer page to see the next steps and full details.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container steps">
+      <h2 class="section-heading">How It Works</h2>
+      <p class="section-desc">
+        Three simple steps to explore the offer.
+      </p>
+
+      <div class="step-list">
+        <div class="step">
+          <div class="step-number">1</div>
+          <p>Click the offer button below.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <p>Read the official offer requirements.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <p>Follow the instructions if you qualify.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container bottom-cta">
+      <h2>Ready to Explore the Offer?</h2>
+      <p>Check the official details to learn more.</p>
+
+      <a class="cta"
+         href="https://YOUR-CPA-TRACKING-LINK-HERE"
+         target="_blank"
+         rel="sponsored nofollow noopener">
+        ENTER OFFER PAGE &nbsp; →
+      </a>
+
+      <p class="fine-print">
+        Participation does not guarantee a reward. Terms and eligibility apply.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>REWARDZONE</strong>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p>
+        This website is an independent promotional page and is not
+        affiliated with or endorsed by Apple unless explicitly stated.
+      </p>
+      <p>
+        Some links may be affiliate or CPA links. We may earn a
+        commission when visitors complete qualifying actions.
+      </p>
+      <p>© <span id="year"></span> RewardZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
